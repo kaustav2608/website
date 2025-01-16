@@ -23,7 +23,7 @@ COPY . /tmp/website/
 RUN cp -R /tmp/website/* /var/www/html/ && rm -rf /tmp/website/.git/
 
 # Change ownership again in case files are copied with root permissions
-RUN chown -R www-data:www-data /var/www/html/
+RUN chown -R ubuntu:ubuntu /var/www/html/
 
 # Expose port 80 (default HTTP port)
 EXPOSE 80
