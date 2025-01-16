@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /var/www/html
 
 # Ensure the directory has proper permissions for Apache to write to it
-RUN chown -R www-data:www-data /var/www/html/ && chmod -R 755 /var/www/html/
+RUN chown -R ubuntu:ubuntu /var/www/html/ && chmod -R 755 /var/www/html/
 
 # Exclude .git directory while copying the app files
 COPY . /tmp/website/
