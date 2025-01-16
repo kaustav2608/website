@@ -1,15 +1,16 @@
 # Use an official Ubuntu base image
 FROM ubuntu:20.04
 
+# Set environment variable to avoid interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install Apache and necessary utilities
 RUN apt-get update && apt-get install -y \
     apache2 \
     git \
     curl \
+    tzdata \
     && rm -rf /var/lib/apt/lists/*
-
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
 
 # Set the working directory for Apache to the default location
 WORKDIR /var/www/html
