@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: website
-        image: kaustav26/website:latest
+        image: kaustav26/website_new:latest
         ports:
         - containerPort: 80
